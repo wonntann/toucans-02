@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- This is a clone of the sliding sidebar from http://euforia-wp.ht2.pl/demo1/post-format-standard-2/#comment-16 -->
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="sliding-nav.css">
+</head>
+<body>
+
+<!-- outer-sidebar and icon to toggle left-sidebar back -->
+<div class="outer-sidebar">
+  <button class="navigation-button" id="navigation-button">
+    <i class="fa fa-bars"></i>
+  </button>
+</div>
+  
+
+
+<!-- Left Side Bar -->
+<div class="left-sidebar" id="left-sidebar">
+  <!-- button to go back -->
+  <button class="sidebar-back-button" type="button" id="sidebar-back-button">
+    <i class="fa fa-chevron-left"></i>
+  </button>
+  
+  <div class="content-wrapper">
+    <!-- search form -->
+    <form class="search">
+      <input type="text" placeholder="Search...">
+      <button type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  
+    <!-- recent-posts section -->
+    <section class="recent-posts">
+
+      <h3>Recent Posts</h3>
+
+      <ul>
+        <li><a href="#">Bootstrap 4 alpha</a></li>
+        <li><a href="#">Post format video vimeo</a></li>
+        <li><a href="#">Post Format Standard</a></li>
+        <li><a href="#">Post format video YouTube</a></li>
+        <li><a href="#">Photography is more…</a></li>
+      </ul>
+    </section>
+
+    <!-- recent-comments section -->
+    <section class="recent-comments">
+
+      <h3>Recent Comments</h3>
+
+      <ul>
+        <li><a href="#">test on Post format video vimeo</a></li>
+        <li><a href="#">TEST on Post Format “Standard”</a></li>
+        <li><a href="#">Smeku on Post Format Standard</a></li>
+        <li><a href="#">Smeku on Post Format Standard</a></li>
+        <li><a href="#">Jone Doe on Post Format Standard</a></li>
+      </ul>
+    </section>
+
+    <!-- archives section -->
+    <section class="archives">
+
+      <h3>Archives</h3>
+
+      <ul>
+        <li><i class=""></i><a href="#">November 2017</a></li>
+        <li><i class=""></i><a href="#">December 2017</a></li>
+      </ul>
+    </section>
+
+    <!-- categories section -->
+    <section class="categories">
+
+      <h3>Categories</h3>
+
+      <ul>
+        <li><i class=""></i><a href="#">audio</a></li>
+        <li><i class=""></i><a href="#">Bootstrap</a></li>
+        <li><i class=""></i><a href="#">Css3</a></li>
+        <li><i class=""></i><a href="#">html5</a></li>
+        <li><i class=""></i><a href="#">music</a></li>
+        <li><i class=""></i><a href="#">Uncategorized</a></li>
+        <li><i class=""></i><a href="#">wideo</a></li>
+        <li><i class=""></i><a href="#">wordpress</a></li>
+      </ul>
+    </section>
+
+    <!-- meta section -->
+    <section class="meta">
+
+      <h3>Meta</h3>
+
+      <ul>
+        <li><i class=""></i><a href="#">Log in</a></li>
+        <li><i class=""></i><a href="#">Entries RSS</a></li>
+        <li><i class=""></i><a href="#">Comments RSS</a></li>
+        <li><i class=""></i><a href="#">WordPress.org</a></li>
+      </ul>
+    </section>
+  </div> <!-- end content-wrapper div -->
+</div> <!-- end left-sidebar div -->
+<script type="text/javascript" src="sliding-nav.js"></script>
+</body>
+</html>

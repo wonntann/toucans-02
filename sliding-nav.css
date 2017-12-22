@@ -1,0 +1,213 @@
+/* reset rules */
+* {
+  box-sizing: border-box;
+}
+
+body, .outer-sidebar, .left-sidebar, .left-sidebar ul {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.outer-sidebar {
+  border: 1px solid #f7f8fa;
+  width: 270px;
+  height: 100vh;
+  background-color: #d3d3d3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.navigation-button {
+  margin: 0;
+  padding: 10px 15px;
+  color: #444;
+  border: 0;
+  outline: none;
+  transition: color 0.3s ease-out;
+  background: none;
+  float: right;
+  position: relative;
+}
+
+.navigation-button:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* styling the navigation-button animation */
+.navigation-button::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff1919;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+}
+
+.navigation-button:hover::before {
+  transform: scale(1);
+}
+
+/* start left-sidebar div styling */
+/* left-sidebar */
+.left-sidebar {
+  position: fixed;
+  left: -270px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  width: 270px;
+  border: 1px solid #f7f8fa;
+  transition: left 0.5s;
+  height: 100vh;
+}
+
+/* styling the lists */
+.left-sidebar ul {
+  list-style: none;
+}
+
+.left-sidebar h3 {
+  margin: 10px 0;
+}
+
+.left-sidebar section {
+  padding: 20px;
+}
+
+.left-sidebar ul li {
+  padding: 5px 0;
+}
+
+/* Adding the font awesome icons */
+.recent-comments li::before {
+  margin-right: 6px;
+  content: "\f0e5";
+  font-family: FontAwesome;
+  color: #bdbdbd;
+}
+
+.archives li::before {
+  margin-right: 6px;
+  content: "\f073";
+  font-family: FontAwesome;
+  color: #bdbdbd;
+}
+
+.categories li::before {
+  margin-right: 6px;
+  content: "\f07c";
+  font-family: FontAwesome;
+  color: #bdbdbd;
+}
+
+.meta li::before {
+  margin-right: 6px;
+  content: "\f101";
+  font-family: FontAwesome;
+  color: #bdbdbd;
+}
+
+.left-sidebar ul li a {
+  text-decoration: none;
+  color: #444;
+  transition: color 0.4s ease;
+}
+
+.left-sidebar ul li a:hover {
+  color: #ff1919;
+}
+
+/* button to go back */
+.sidebar-back-button {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #ff1919;
+  border: 0;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: color 0.3s ease-out;
+  z-index: 9999; /* allows hover::before background to be on top of button background and maintains button on top of the stack */
+}
+
+.sidebar-back-button:hover {
+  background: none;
+  color: #ff1919;
+  cursor: pointer;
+}
+
+.sidebar-back-button::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f7f8fa;
+  transform: scale(0);
+  transition: transform 0.3s ease-out;
+}
+
+.sidebar-back-button:hover::before {
+  transform: scale(1);
+}
+
+
+/* content-wrapper div */
+.content-wrapper {
+  overflow-y: scroll;
+  padding: 30px 10px;
+  height: 100vh;
+}
+
+/* search */
+.search {
+  padding: 20px;
+  font-size: 0;
+}
+
+.search input {
+  border: 1px solid #f7f8fa;
+  padding: 6px 12px;
+  margin: 0;
+  outline: none;
+  transition: background-color 0.5s ease;
+  width: 80%;
+}
+
+.search input:focus {
+  background-color: #f7f8fa;
+}
+
+.search button {
+  margin: 0;
+  padding: 6px;
+  background-color: #fff;
+  border: 1px solid #f7f8fa;
+  outline: none;
+  cursor: pointer;
+  width: 20%;
+}
+
+.search button i {
+  transition: color 0.5s ease;
+}
+
+.search button:hover i {
+  color: #fff;
+}
+/* end left-sidebar div styling */
