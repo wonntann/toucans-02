@@ -301,6 +301,13 @@ body {
         z-index: 100;
         border: none;
     }
+    div.sidebar-nav ul {
+        display: inline-block;
+        top: -50px;
+    }
+    div.sidebar-nav li {
+        display: inline-block;
+    }
     div.nav-header {
         background-color: #252525;
    
