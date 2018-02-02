@@ -272,13 +272,120 @@ body {
     /* Red */
     text-decoration: underline;
 }
+
+
+
+nav {
+
+	float: right;
+	padding: 20px;	
+	
+}
+
+#menu-icon {
+
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #000000 url(/images/menu-icon.png) center;
+
+}
+a#menu-icon {
+    cursor:default;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  .header .menu-icon span .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+  
+
+  
 /* Phones and Tablets , where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 
 @media screen and (min-width: 1024px) {
     div.navbar1 {
         display: none;
     }
-}
+    /* Responsive menu */
+} 
  
 
 /* Phones and Tablets , where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
@@ -301,11 +408,7 @@ body {
         z-index: 100;
         border: none;
     }
-    div.sidebar-nav ul {
-        display: inline-block;
-        top: -50px;
-    }
-    div.sidebar-nav li {
+    #menu-icon {
         display: inline-block;
     }
     div.nav-header {
@@ -326,12 +429,19 @@ body {
 div.hero-image {
     width: 100%;
     left: 0px; 
+    padding-left: 25%;
 }
 .sidenav {
-    display: none;
+    display: block;
+}
+.sidenav ul {
+    top: -60px;
+}
+.sidenav li {
+    display: inline-block;
 }
 .hero-image h1.text-center {
-    margin-top: 100px;
+    margin-top: 200px;
 }
 div.hero-image h1, h2 {
     font-size: 50px;
@@ -344,16 +454,106 @@ div.navbar1 {
 }
 }
 
+
+@media only screen and (max-width: 836px) {
+#menu-icon {
+    display: block;
+    float: right;
+}
+
+#nav.js {
+    display: none;
+}
+
+.sidenav ul {
+    position: absolute;
+    top: 100%;
+    background-color: #000000;
+    margin: 0;
+    padding: 0 15px;
+    width: 150px;
+    right: 0;
+    text-align: center;
+
+}
+
+.sidebar-nav {
+    display: none;
+}
+.sidenav a {
+    display: block;
+    padding: 15px;
+}
+.menu-toggle {
+    padding: 1em;
+    position: absolute;
+    top: 28px;
+    right: 1em;
+    cursor: pointer;
+}
+.hamburger, .hamburger2, .hamburger3 {
+
+    background: #fff;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+}
+.hamburger2 {
+    transform: translateY(-12px);
+}
+.hamburger3{
+    transform: translateY(3px);
+}
+}
+
 @media only screen and (max-width: 700px) {
     div.hero-image h1 {
-        font-size: 30px;
+        font-size: 50px;
     }
 
     div.hero-image {
-        padding-left: 20%;
+        padding-left: 25%;
     }
     div.hero-image h2 {
         font-size: 10px;
+    }
+    .div h2.keyword-2 {
+        padding-right: 230px !important;
+    }
+}
+@media only screen and (max-width: 427px) {
+    div.hero-image h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    div.hero-image h1 {
+        font-size: 40px;
+    }
+    div.hero-image h2.keyword {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 413px) {
+    div.hero-image h1 {
+        font-size: 30px;
+    }
+    div.hero-image h2#keyword {
+        font-size: 25px;
+    }
+    div.hero-image {
+        padding-left: 20%;
+    }
+}
+
+@media only screen and (max-width: 314px) {
+    div.hero-image h1 {
+        font-size: 25px;
+    }
+    div.hero-image h2.keyword {
+        font-size: 18px;
     }
 }
 
